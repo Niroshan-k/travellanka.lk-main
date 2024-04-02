@@ -2,6 +2,7 @@
     "name": "Travel.LK",
     "short_name": "Travel.LK",
     "start_url" : "./index.html",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "/android-chrome-16x16.png",

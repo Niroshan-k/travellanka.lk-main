@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel lanka(pvt)Ltd.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#8a8a8a">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#ffffff">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="small_css_for_index.css">
+  
+</head>
+<script>
+ function emailform(){
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var massage = document.getElementById("massage").value;
+  var errorMessages = [];
+
+  if (name.trim() === ''){
+   errorMessages.push('Name is required');
+  }
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+   errorMessages.push('Invalid email address');
+  }
+  if (massage.trim() === ''){
+   errorMessages.push('massage is required')
+  }
+  if (errorMessages.length > 0) {
+      document.getElementById('errorMessages').innerHTML = errorMessages.join('<br>');
+  } else {
+      document.getElementById('errorMessages').innerHTML = '';
+      alert('Your massage have sended!');
+  }
+ }
+</script>
+
+<nav class="fixed mt-0">
+  <img src="20231226_172656.png" class="logo">
+
+  <input type="checkbox" id="check">
+  <label for="check" class="icons">
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <i class="fa-solid fa-x" id="close-icon"></i>
+  </label>
+  <section class="navbar" background-color="#ffffff">
+    <a href="index.html" style="--i:0;">Home</a>
+    <a href="aboutus.html" style="--i:1;">About</a>
+    <a href="services.html" style="--i:2;">Services</a>
+    <a href="contact.html" style="--i:3;">Contact</a>
+  </section>
+</nav>
+
+
+<main class="bg-cover bg-fixed bg-center pt-20">
+  <section class="flex w-full min-h-screen justify-center items-center p-8 md:mt-3">
+    <section class="flex flex-col space-y-6 backdrop-blur-[50px] text-zinc-100 drop-shadow-lg w-full max-w-4xl p-8 rounded-xl shadow-lg text-black md:flex-row md:space-x-6 md:space-y-5">
+      <section class="flex flex-col space-y-8 justify-between">
+        <section class="space-y-8">
+          <h1 class="font-bold text-5xl tracking-wide">Contact Us</h1>
+          <p class="text-black-200"><i class="fa-solid fa-quote-left">&nbsp;</i>Unlocking Sri Lanka's Wonders: We envision being the gateway to unforgettable experiences, connecting travelers with the rich culture, stunning landscapes, and warm hospitality of Sri Lanka. Your journey, our passion.&nbsp;<i class="fa-solid fa-quote-right"></i></p>
+          <!-- vision -->
+        </section>
+        <section class="flex flex-col space-y-4">
+          <section class="inline-flex space-x-3">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 78 86 720 25</span>
+          </section>
+          <section class="inline-flex space-x-3">
+            <i class="fa-solid fa-envelope"></i>
+            <span>travellanka@gmail.com</span>
+          </section>
+          <section class="inline-flex space-x-3">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>no.269/A, Gampola, Kandy.</span>
+          </section>
+        </section>
+        <section class="flex text-lg space-x-6">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        </section>
+      </section>
+
+      <!-- contact form -->
+      <section>
+        <section class="rounded-xl p-8 md:w-80 ring-2 ring-white">
+          <form action="" class="flex flex-col space-y-4 md:self-end">
+            <section>
+              <label for="" class="text-sm font-bold">Name :</label>
+              <input type="text" class="shadow-md w-full rounded-md px-4 py-2 bg-transparent outline-white focus:ring-2 focus:ring-black mt-2" id="name">
+            </section>
+            <section>
+              <label for="" class="text-sm font-bold">Email :</label>
+              <input type="email" class="shadow-md w-full rounded-md px-4 py-2 bg-transparent outline-white focus:ring-2 focus:ring-black mt-2" id="email">
+            </section>
+            <section>
+              <label for="" class="text-sm font-bold">Message :</label>
+              <textarea 
+              rows="5"
+              class="shadow-md w-full bg-transparent rounded-md px-4 py-2 outline-white focus:ring-2 focus:ring-black mt-2" id="massage">
+              </textarea>  
+            </section>
+            <button class="inline-block self-end bg-black shadow-md text-white font-bold rounded-lg px-6 py-2 uppercase text-sm" onclick="emailform()">send message</button>
+          </form>
+          <br>
+          <section id="errorMessages" class="text-white">
+
+          </section>
+        </section>
+      </section>
+  </section>
+  </section>
+<!-- footer -->
+
+  <section class="footer">
+    <p>&copy;2024 Travel Lanka(pvt)Ltd.</p>
+  </section>
+</main>  
+
+</html> 

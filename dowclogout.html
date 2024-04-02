@@ -1,0 +1,357 @@
+<head>
+ <title>Travel Lanka (pvt)Ltd.</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <script defer src="index.js"></script>
+ <link rel="stylesheet" href="dowc.css" />
+ <link rel="stylesheet" href="main-css.css">
+ <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+ <link rel="manifest" href="manifest.json">
+ <link rel="mask-icon" href="safari-pinned-tab.svg" color="#8a8a8a">
+ <meta name="msapplication-TileColor" content="#000000">
+ <meta name="theme-color" content="#ffffff">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body>
+
+ <!-- header -->
+ <header class="headlogos">
+  <!-- logos -->
+  <section>
+    <img src="20231226_172656.png" class="head-logo" alt="logo"> 
+  </section>
+  <section class="buttono">
+    <a href="register.html"><button class="sign-up">Log Out</button></a>
+  </section> 
+</header>
+ <br>
+
+
+ <main x-data="main">
+   <!-- main section about dowc -->
+   <!-- content from department of wildlife website-->
+
+   <section>
+     <h1 id="head-word" x-text="headword"></h1>
+
+       <br>
+       <h2 id="headtext" x-text="headtext"></h2>
+       <hr>
+       <br>
+       <p id="p1" x-text="p1"></p>
+       <br>
+       <p id="p2" x-text="p2"></p>
+       <br>
+       <p id="p3" x-text="p3"></p>
+       <br>
+       <p id="p4" x-text="p4"></p>
+       <br>
+       <p id="p5" x-text="p5"></p>
+       <br>
+       <p id="p6" x-text="p6"></p>
+       <br>
+       <p id="p7" x-text="p7"></p>
+       <br>
+       <p id="p8" x-text="p8"></p>
+       <br>
+       <p id="p9" x-text="p9"></p>
+   </section>
+
+   <!-- sub-sections -->
+
+   <br>
+   <h1 id="head1" x-text="head1"></h1>
+   <p id="p10" x-text="p10">
+
+   </p>
+   <br>
+   <h3 id="head2" x-text="head2"></h3>
+   <br>
+   <ol id="protect">
+     <template x-for="item in protect">
+       <li x-text="item"></li>
+     </template>
+   </ol>
+   <br>
+   <h1 id="head3" x-text="head3"></h1>
+ <br>  
+
+<!-- gallery -->
+<!-- images & content from wikipedia-->
+
+ <section class="grid">
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="1920px-Yala_Beach.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Yala</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Yala_National_Park">Yala National Park</a></p>
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="Hakgala_Botanical_Garden.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Hakgala</h1>
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Hakgala_Botanical_Garden">Hakgala Botanical Garden</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="Ritigala.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Ritigala</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Ritigala">Ritigala</a></p> 
+       </section>
+     </section>
+   </section>
+ </section> 
+ <br>
+ <h1 x-text="head4"></h1>
+ <h3 x-text="subhead1"></h3>
+ <section class="grid">
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="yala.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Yala</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Yala_National_Park">Yala National Park</a></p>
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="wilpattu.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Wilpattu</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Wilpattu_National_Park">Wilpattu National Park</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="Srilankamountainforest.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Horton Plains</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Horton_Plains_National_Park">Horton Plains National Park</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="Udawalawe_National_Park_(Udawalawa_Reservoir).jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Udawalawe</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Udawalawe_National_Park">Udawalawe National Park</a></p> 
+       </section>
+     </section>
+   </section>
+ </section> 
+ <br>
+ <h1 x-text="head5"></h1>
+ <br>
+ <section class="grid">
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="minneriya.jpeg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Minneriya</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Minneriya_National_Park">Minneriya National Park</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="minneriya-national-park.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Minneriya</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Minneriya_National_Park">Minneriya National Park</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="minneriya1.jpeg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Nelugala</h1> 
+         <p class="p"><a href="https://lk.chm-cbd.net/protected-areas/nelugala-jungle-corridor">nelugala jungle corridor</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="nelugala.jpeg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Nelugala</h1> 
+         <p class="p"><a href="https://lk.chm-cbd.net/protected-areas/nelugala-jungle-corridor">nelugala jungle corridor</a></p> 
+       </section>
+     </section>
+   </section>
+ </section> 
+ <br>
+ <h1 x-text="head6"></h1>
+ <br>
+ <section class="grid">
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="Adams.jpeg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Adam's Bridge</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Adam%27s_Bridge_Marine_National_Park">Adam's Bridge</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="AdamsBridge02-NASA.jpg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Adam's Bridge</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Adam%27s_Bridge_Marine_National_Park">Adam's Bridge</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="adams1.jpeg" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Adam's Bridge</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Adam%27s_Bridge_Marine_National_Park">Adam's Bridge</a></p> 
+       </section>
+     </section>
+   </section>
+   <section class="flip-card">
+     <section class="flip-card-inner">
+       <section class="flip-card-front">
+         <img src="adams2.webp" alt="yala">
+       </section>
+       <section class="flip-card-back">
+         <h1 class="h">Adam's Bridge</h1> 
+         <p class="p"><a href="https://en.wikipedia.org/wiki/Adam%27s_Bridge_Marine_National_Park">Adam's Bridge</a></p> 
+       </section>
+     </section>
+   </section>
+ </section> 
+ <br>
+
+<!-- map of department of wild conservation-->
+
+ <h1 x-text="location"></h1>
+ <br>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4050785.3254483608!2d78.05800095985727!3d7.482357140298339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1703827881955!5m2!1sen!2slk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="map"></iframe>
+ </main>
+
+ <!-- nav bar-->
+
+ <nav class="navbar">
+   <ul class="navbar-nav">
+     <li class="logo">
+       <a class="nav-link" href="index.html">
+         <span class="link-text logo-text"><img class="image" src="travel.lanka.png"></span>
+         <svg class="logo1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"/></svg>
+       </a>
+     </li>
+
+     <li class="nav-item">
+       <a href="homelogout.html" class="nav-link">
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+         <span class="link-text">Home</span>
+       </a>
+     </li>
+
+     <li class="nav-item">
+       <a href="introductionlogout.html" class="nav-link">
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+         <span class="link-text">Introduction</span>
+       </a>
+     </li>
+     <li class="nav-item">
+       <a href="dowclogout.html" class="nav-link" id="dowc">
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+         <span class="link-text">About DWC</span>
+       </a>
+     </li>
+
+     <li class="nav-item">
+       <a href="animallogout.html" class="nav-link">
+         
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M226.5 92.9c14.3 42.9-.3 86.2-32.6 96.8s-70.1-15.6-84.4-58.5s.3-86.2 32.6-96.8s70.1 15.6 84.4 58.5zM100.4 198.6c18.9 32.4 14.3 70.1-10.2 84.1s-59.7-.9-78.5-33.3S-2.7 179.3 21.8 165.3s59.7 .9 78.5 33.3zM69.2 401.2C121.6 259.9 214.7 224 256 224s134.4 35.9 186.8 177.2c3.6 9.7 5.2 20.1 5.2 30.5v1.6c0 25.8-20.9 46.7-46.7 46.7c-11.5 0-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6 0l-88 22c-11.1 2.8-22.5 4.2-34 4.2C84.9 480 64 459.1 64 433.3v-1.6c0-10.4 1.6-20.8 5.2-30.5zM421.8 282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3 78.5-33.3s29.1 51.7 10.2 84.1s-54 47.3-78.5 33.3zM310.1 189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1 84.4-58.5s46.9 53.9 32.6 96.8s-52.1 69.1-84.4 58.5z"/></svg>
+         <span class="link-text">Animals</span>
+       </a>
+     </li>
+     <li class="nav-item">
+       <a href="gallerylogout.html" class="nav-link">
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
+         <span class="link-text">Gallery</span>
+       </a>
+     </li>
+     <li class="nav-item">
+       <a href="leophardlogout.html" class="nav-link">
+         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M320 192h17.1c22.1 38.3 63.5 64 110.9 64c11 0 21.8-1.4 32-4v4 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V339.2L280 448h56c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-53 0-96-43-96-96V192.5c0-16.1-12-29.8-28-31.8l-7.9-1c-17.5-2.2-30-18.2-27.8-35.7s18.2-30 35.7-27.8l7.9 1c48 6 84.1 46.8 84.1 95.3v85.3c34.4-51.7 93.2-85.8 160-85.8zm160 26.5v0c-10 3.5-20.8 5.5-32 5.5c-28.4 0-54-12.4-71.6-32h0c-3.7-4.1-7-8.5-9.9-13.2C357.3 164 352 146.6 352 128v0V32 12 10.7C352 4.8 356.7 .1 362.6 0h.2c3.3 0 6.4 1.6 8.4 4.2l0 .1L384 21.3l27.2 36.3L416 64h64l4.8-6.4L512 21.3 524.8 4.3l0-.1c2-2.6 5.1-4.2 8.4-4.2h.2C539.3 .1 544 4.8 544 10.7V12 32v96c0 17.3-4.6 33.6-12.6 47.6c-11.3 19.8-29.6 35.2-51.4 42.9zM432 128a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm48 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
+         <span class="link-text">Leopard</span>
+       </a>
+     </li>
+   </ul>
+ </nav>
+
+ <!-- footer -->
+ <footer>
+   <section>
+     <section class="footer2">
+       <a href=""><i class="fa-brands fa-facebook"></i></a>
+       <a href=""><i class="fa-brands fa-instagram"></i></a>
+       <a href=""><i class="fa-brands fa-twitter"></i></a>  
+       <a href=""><i class="fa-brands fa-youtube"></i></a>  
+     </section>
+     <section class="footernav">
+       <ul>
+         <li><a href="" >News Letter</a></li>
+         <li><a href="" >About Us</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+         <li><a href="">Our Team</a></li>
+       </ul>
+     </section>
+     <br>
+     <section class="foterbottom">
+       <a href="index.html"><img class="footer-logo" src="Picsart_23-12-26_21-01-43-775.png"></a>
+       <p>Copyright &copy;2023 Travel Lanka (pvt)Ltd.</p>
+     </section>
+   </section>
+ </footer>
+
+<script src="dowc.js"></script>
+</body>

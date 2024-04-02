@@ -1,0 +1,112 @@
+
+main{
+ margin-left:5rem;
+}
+.head-txt{
+ font-family: 'Emblema One', system-ui;
+ text-align: center;
+ font-size: 50px;
+}
+
+iframe{
+ width: 100%;
+ height: 100%;
+ border-radius: 10px;
+}
+
+h1{
+ margin: 4rem;
+}
+img{
+ height: 100%;
+ width: 100%;
+}
+
+.grid{
+ display: grid;
+ margin: 4rem;
+ grid-template-columns: 1fr 1fr;
+ box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+ padding: 1rem;
+ border-radius: 9px;
+ gap: 1rem;
+ transform:600ms;
+}
+
+a{
+ text-decoration: none;
+}
+
+button{
+ margin-left: 4rem;
+ padding: 5px 5px;
+ outline: none;
+ border: none;
+ background: #04251a;
+ border-radius: 10px;
+ cursor: pointer;
+ box-shadow:0 2px #c2fef1
+}
+
+button:active{
+ box-shadow: 0 2px #15523e;
+ transform: translateY(4px);
+}
+
+video{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin: 0;
+  border-radius: 0px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+
+}
+
+.animation{
+ background: url("safari.png"); 
+ background-size: cover;
+ border-radius: 10px;
+ animation-name: yala;
+ animation-duration: 20s;
+ animation-delay: 0s;
+ animation-iteration-count: infinite;
+}
+
+@keyframes yala{
+  0% {background: url("safari.png");
+   background-size: cover;
+  }
+  25% {background: url("bird1.jpeg");
+   background-size: cover;
+  }
+  50% {background: url("bird2.jpeg");
+  background-size: cover;
+  }
+  100% {background: url("bird3.jpeg");
+  background-size: cover;
+  }
+ }
+
+
+ @media only screen and (max-width: 600px) {
+
+  main{
+   margin: 0;
+  }
+  .grid{
+   margin: 1rem;
+   display: flex;
+   flex-direction: column;
+  }
+  h1{
+   margin: 1rem;
+  }
+  .head-txt{
+   font-size: 35px;
+  }
+  button{
+   margin-left: 1rem;
+  }
+
+ } 

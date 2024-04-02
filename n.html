@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterflies of Sri Lanka</title>
+    <!-- Include Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+
+    <div x-data="butterflyData">
+        <h1 x-text="pageTitle" id="title"></h1>
+        <p x-text="description"></p>
+        <h2 x-text="endemic"></h2>
+        <ul>
+            <template x-for="butterfly in endemicButterflies">
+                <li x-text="butterfly"></li>
+            </template>
+        </ul>
+    </div>
+    <button onclick="showLoginDialog()">Edit-Content</button>
+
+    <!-- Pop up dialog -->
+    <dialog id="login-dialog">
+      <h2>Edit</h2>
+      <form method="get">
+        <label for="pageTitle">Page Title:</label>
+        <input type="text" name="pageTitle" id="pageTitle" placeholder="Butterflies of Sri Lanka">
+        <button type="button" id="btn">Submit</button>
+      </form>
+      <button onclick="printButterflies()">Edit-Content</button>
+
+    </dialog>
+    <!-- End of pop up dialog  -->
+    
+    <script>
+    // Get reference to the login dialog
+    const loginDialog = document.getElementById('login-dialog'); 
+    //Function to show the login dialog
+    function showLoginDialog() {
+       loginDialog.showModal();
+      }
+
+        const butterflyData = {
+    pageTitle: '',
+    description: '',
+    endemic: '',
+    endemicButterflies: []
+};
+
+// Function to fetch data from local storage
+fetch('butterflies.json')
+    .then(response => response.json())
+    .then(data => {
+        localStorage.setItem("butterflies", JSON.stringify(data))
+        loadDataFromLocalStorage(); // Call the function to load data after storing
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+function loadDataFromLocalStorage() {
+    const storedData = localStorage.getItem("butterflies");
+    if (storedData) {
+        const parsedData = JSON.parse(storedData);
+        butterflyData.pageTitle = parsedData.pageTitle;
+        butterflyData.description = parsedData.description;
+        butterflyData.endemic = parsedData.endemic;
+        butterflyData.endemicButterflies = parsedData.endemicButterflies;
+        console.log("Data loaded from local storage:", butterflyData);
+    } else {
+        console.log("No data found in local storage.");
+    }
+}
+
+    const btnSubmit=document.getElementById("btn");
+    const txtTitle=document.getElementById("pageTitle");
+    const heading1=document.getElementById("title");
+    btnSubmit.addEventListener("click",editValues);
+
+
+    function editValues() {
+    // Update butterflyData with the new title from the input field
+    butterflyData.pageTitle = txtTitle.value;
+
+    // Update the heading with the new title
+    heading1.innerText = butterflyData.pageTitle;
+
+    // Update local storage with the modified butterflyData
+    localStorage.setItem("butterflies", JSON.stringify(butterflyData));
+}
+            
+    </script>
+</body>
+</html>

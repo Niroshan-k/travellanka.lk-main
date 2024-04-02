@@ -1,0 +1,60 @@
+const main = {}
+const footer = {}
+const footerbottom = {}
+
+fetch('animal.json')
+.then(Response => Response.json())
+.then(data => {
+ main.head1 = data.head1;
+ main.head2 = data.head2;
+ main.headp1 = data.headp1;
+ main.headp2 = data.headp2;
+ main.head3 = data.head3;
+ main.p1 = data.p1;
+ main.p2 = data.p2;
+ main.p3 = data.p3;
+ main.p4 = data.p4;
+ main.p5 = data.p5;
+ main.p6 = data.p6;
+ main.p7 = data.p7;
+ main.p8 = data.p8;
+ main.p9 = data.p9;
+ main.p10 = data.p10;
+ main.p11 = data.p11;
+ main.p12 = data.p12;
+ main.p13 = data.p13;
+ main.p14 = data.p14;
+ main.p15 = data.p15;
+ main.p16 = data.p16;
+ main.p17 = data.p17;
+ main.p18 = data.p18;
+ main.p19 = data.p19;
+ main.p20 = data.p20;
+ main.h1 = data.h1;
+ main.h2 = data.h2;
+ main.h3 = data.h3;
+ main.h4 = data.h4;
+ main.h5 = data.h5;
+ main.h6 = data.h6;
+ main.h7 = data.h7;
+ main.h8 = data.h8;
+ main.h9 = data.h9;
+ main.h10 = data.h10;
+ main.h11 = data.h11;
+ main.h12 = data.h12;
+ main.h13 = data.h13;
+ main.h14 = data.h14;
+ main.h15 = data.h15;
+ main.h16 = data.h16;
+ main.h17 = data.h17;
+ main.h18 = data.h18;
+ main.h19 = data.h19;
+ main.h20 = data.h20;
+ footer.footer1 = data.footer1;
+ footer.footer2 = data.footer2;
+ footer.footer3 = data.footer3;
+ footer.footer4 = data.footer4;
+ footerbottom.footer5 = data.footer5;
+
+ localStorage.setItem("animal-page",JSON.stringify(data));
+});

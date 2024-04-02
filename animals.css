@@ -1,0 +1,92 @@
+.p{
+  text-align: center;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+}
+.or {
+  background:#15523e;
+  border-radius: 9px;
+  min-width: 100px;
+  color: white;
+  padding: 2cqmax;
+}
+.yala{
+  height:auto;
+}
+hr{
+  margin: 4rem;
+}
+h1{
+  text-align: center;
+}
+.animals{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin: 4rem;
+}
+a{
+  text-decoration: none;
+}
+input{
+  height: 2rem;
+  width: 5rem;
+  border-radius: 10px;
+  border: 0px;
+  background: #c2fef1;
+}
+main button{
+  padding: 5px 5px;
+  outline: none;
+  border: none;
+  background: #04251a;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow:0 2px #c2fef1
+}
+
+button:active{
+  box-shadow: 0 2px #15523e;
+  transform: translateY(4px);
+}
+#link {
+  font-size: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #animal{
+    border-radius: 100%;
+    background:transparent;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    margin:4px;
+  }
+  .p{
+    gap: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .wil {
+    font-size: 10px;
+    line-height: 19px;
+    text-align: left;
+  }
+  .yala {
+    height: 300px;
+  }
+  hr{
+    margin: 0px;
+  }
+  .animals{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}

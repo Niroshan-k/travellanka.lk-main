@@ -1,0 +1,65 @@
+p{
+ text-align: left;
+}
+ol{
+ font-size: 14px;
+ font-weight: 600;
+ margin-left: 1rem;
+}
+ul{
+ font-weight: 200;
+ list-style:square;
+ margin-left: 2rem;
+ line-height: 2rem;
+}
+main{
+ padding: 4rem;
+}
+img{
+ width: 100%;
+}
+.a{
+ font-size: 10px;
+ text-decoration: none;
+}
+.a:hover{
+ text-decoration: underline;
+ color: aquamarine;
+}
+
+@media only screen and (max-width: 650px) {
+ #leophard{
+  border-radius: 100%;
+  background:transparent;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+  margin:4px;
+}
+ ol{
+  font-size: 12px;
+  line-height: 1rem;
+  margin-left: 0.3rem;
+ }
+ ul{
+  line-height: 1rem;
+  margin-left: 0.3rem;
+  font-size: 12px;
+ }
+ p{
+  font-size: 12px;
+ }
+ h4,h3{
+  font-size: 12px;
+ }
+ h2{
+  font-size: 20px;
+ }
+ main{
+  padding: 0px;
+ }
+ img{
+  padding: 0px;
+ }
+ body{
+  overflow-x: scroll;
+ }
+}

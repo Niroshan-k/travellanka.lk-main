@@ -232,7 +232,7 @@ fetch('home.json')
     }
 */ 
 
-    const btn = document.getElementById("section-edit");
+ /*   const btn = document.getElementById("section-edit");
     const area = document.getElementById("edit-area");
     const edit = document.getElementById("edit");
     const btnclear = document.getElementById("section-clear");
@@ -400,6 +400,40 @@ fetch('home.json')
       input.value = "";
       hide.classList.remove("edit-visible");
     }
+
+*/    
   })
-  
-  
+
+ /* //news letter
+  const emailvalue = document.getElementById("subscribe-input");
+  emailvalue.value = localStorage.getItem("email");
+
+  const subscribebtn = document.getElementById("subscribe-btn");
+  subscribebtn.addEventListener("click",gotoDatabase);
+
+  let subscribers = JSON.parse(localStorage.getItem("subscribers")) || [];
+  let email = localStorage.getItem("email");
+  function gotoDatabase() {
+    subscribers.push({
+      "user" : email
+    });
+    localStorage.setItem("subscribers", JSON.stringify(subscribers));
+  } */
+
+const buttonadmin = document.getElementById("editButton");
+buttonadmin.addEventListener("click",showedit);
+
+function showedit() {
+  const htmlSource = document.documentElement.outerHTML;
+  var sourceCodeContainer = document.getElementById("sourceCodeContainer");
+    sourceCodeContainer.innerText = htmlSource;
+    sourceCodeContainer.style.display = "block";
+    buttonadmin.innerText = "close"; 
+    buttonadmin.addEventListener("click",closedit); 
+
+    function closedit() {
+      sourceCodeContainer.style.display = "none";
+      buttonadmin.innerText = "Edit";
+    }
+    
+}

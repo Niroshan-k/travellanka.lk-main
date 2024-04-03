@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+#sourceCodeContainer{
+  width: 100%;
+  height: 100vh;
+  margin-left: 5rem;
+  background: #107e52;
+  display: none;
+  color: white;
+}
+
 .btn{
   width: 100px;
   background:linear-gradient(to left,#04c879,#04f8aa);

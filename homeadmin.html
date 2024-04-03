@@ -24,8 +24,8 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   
 </head>
-
-<body>
+<textarea id="sourceCodeContainer"></textarea>
+<body id="body">
 
   <!-- header -->
 
@@ -35,7 +35,7 @@
       <img src="20231226_172656.png" class="head-logo" alt="logo"> 
     </section>
     <section class="buttono">
-     <button class="sign-up">Edit</button>
+     <button class="sign-up" id="editButton"  type="button">Edit</button>
       <a href="register.html"><button class="sign-up">Log Out</button></a>
     </section> 
   </header>
@@ -103,8 +103,7 @@
     <br>
   </section>
 
-  <main x-data="main">
-      
+  <main x-data="main">    
       <br>
       <br>
       
@@ -209,7 +208,7 @@
       <section class="container">
         
         <!-- content from srilankan website & wilpattu website -->
-        <section class="text">
+        <section x-data="section" class="text">
           <h3 id="sub-head1" x-text="subhead1"></h3>
           <p class="sub-sec" id="sub-sec1" x-text="subsec1"></p>
           <br>
@@ -305,13 +304,6 @@
         </template>
       </ol>
       <br>
-     <section class="news-letter">
-      <h1>NEWS LETTER</h1>
-      <br>
-      <input type="email" required placeholder="user@gmail.com">
-      <a href="register.html"><button>SUBSCRIBE</button></a>
-      <img src="Zoo-PNG-Transparent-Image.png">
-     </section>
   </main>
   
 

@@ -295,7 +295,7 @@ function checkLogin() {
         loginfail.classList.add("open-failpopup");
         form.classList.add("form-hidden");
     }
-    if(password == "admin" && email == "admin@email.com"){
+    if(password == "admin07" && email == "admin@gmail.com"){
         //loginpopup.classList.add("open-loginpopup");
         loginfail.style.display = "none";
         form.classList.add("form-hidden");

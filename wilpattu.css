@@ -37,7 +37,7 @@ a{
  text-decoration: none;
 }
 
-button{
+.map{
  margin-left: 4rem;
  padding: 5px 5px;
  outline: none;
@@ -48,7 +48,7 @@ button{
  box-shadow:0 2px #c2fef1
 }
 
-button:active{
+.map:active{
  box-shadow: 0 2px #15523e;
  transform: translateY(4px);
 }

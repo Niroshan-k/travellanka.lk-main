@@ -1,12 +1,11 @@
 #videobg{
- border-radius: 10px;
  width: 100%;
 }
 main{
  margin-left: 5rem;
 }
 .video{
- padding: 4rem;
+ padding: 10px;
 }
 .head-txt{
  font-family: 'Emblema One', system-ui;

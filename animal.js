@@ -168,6 +168,7 @@ fetch('animal.json')
 
  function submitanimaledit() {
   showanimaledit.classList.remove("edit-visible");
+  animaleditbtn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
   p1.innerText = animaleditarea1.value;
   p2.innerText = animaleditarea2.value;
   p3.innerText = animaleditarea3.value;

@@ -232,7 +232,7 @@ fetch('home.json')
     }
 */ 
 
- /*   const btn = document.getElementById("section-edit");
+    const btn = document.getElementById("section-edit");
     const area = document.getElementById("edit-area");
     const edit = document.getElementById("edit");
     const btnclear = document.getElementById("section-clear");
@@ -316,7 +316,7 @@ fetch('home.json')
       }
     }
     
-    // Retrieve DOM elements for the first section
+    //Retrieve DOM elements for the first section
     const button1 = document.getElementById("edit-button1");
     const userClick1 = document.getElementById("show-input-field1");
     const input1 = document.getElementById("edit-input1");
@@ -399,12 +399,51 @@ fetch('home.json')
       edit.innerText = content;
       input.value = "";
       hide.classList.remove("edit-visible");
+    }  
+    
+    const listeditbtn = document.getElementById("show-list");
+    const showtoeditlist = document.getElementById("hidelist");
+    const listarea = document.getElementById("edit-list");
+    const submitlist = document.getElementById("edit-list-save");
+
+    submitlist.addEventListener("click",submitlistf);
+
+    function submitlistf() {
+      const listItems = listarea.value.split('\n').map(item => `<li>${item}</li>`).join('');
+      document.getElementById("animallist").innerHTML = `<ol>${listItems}</ol>`;
+    }
+    
+
+    // Retrieve the list of animals from local storage or use a default list if it's not available
+    let animallist = JSON.parse(localStorage.getItem("animallist")) || ["Sri Lankan Leopard", "Sri Lankan Elephant", "Sloth Bear", "Blue Whale", "Black-necked Stork", "Saltwater Crocodile", "Leatherback Sea Turtle"];
+
+    // Update the text area content with the current list of animals
+    listarea.value = animallist.join('\n');
+
+    // Event listener for the "show-list" button click
+    listeditbtn.addEventListener("click", showlist);
+
+    // Function to handle the "show-list" button click
+    function showlist() {
+      // Adding a CSS class to make the edit area visible
+      showtoeditlist.classList.add("edit-visible");
     }
 
-*/    
+    // Event listener for changes in the text area
+    listarea.addEventListener("input", updateLocalStorage);
+
+    // Function to update local storage when the text area content changes
+    function updateLocalStorage() {
+      // Split the text area content into an array of items
+      animallist = listarea.value.split('\n');
+      // Update local storage with the new list of animals
+      let username = localStorage.getItem("email");
+      localStorage.setItem(username + "-list", JSON.stringify(animallist));
+    }
+
   })
 
- /* //news letter
+  //news letter
   const emailvalue = document.getElementById("subscribe-input");
   emailvalue.value = localStorage.getItem("email");
 
@@ -418,9 +457,10 @@ fetch('home.json')
       "user" : email
     });
     localStorage.setItem("subscribers", JSON.stringify(subscribers));
-  } */
+    emailvalue.value = "";
+  }
 
-const buttonadmin = document.getElementById("editButton");
+/*const buttonadmin = document.getElementById("editButton");
 buttonadmin.addEventListener("click",showedit);
 
 function showedit() {
@@ -436,4 +476,4 @@ function showedit() {
       buttonadmin.innerText = "Edit";
     }
     
-}
+}*/

@@ -93,4 +93,135 @@ fetch('leophard.json')
   localStorage.setItem("leo-b6",data.b6);
   localStorage.setItem("leo-b7",data.b7);
   localStorage.setItem("leo-b8",data.b8);*/
+
+  const hidearea = document.getElementById("hide");
+  const editbtn = document.getElementById("show");
+  const submit = document.getElementById("submit");
+  const editarea = document.getElementById("edit");
+  const editarea1 = document.getElementById("edit1");
+  const editarea2 = document.getElementById("edit2");
+  const editarea3 = document.getElementById("edit3");
+  const editarea4 = document.getElementById("edit4");
+  const editarea5 = document.getElementById("edit5");
+  const editarea6 = document.getElementById("edit6");
+  const editarea7 = document.getElementById("edit7");
+  const editarea8 = document.getElementById("edit8");
+  const editarea9 = document.getElementById("edit9");
+  const editarea10 = document.getElementById("edit10");
+  const editarea11 = document.getElementById("edit11");
+  const editarea12 = document.getElementById("edit12");
+  const editarea13 = document.getElementById("edit13");
+  const editarea14 = document.getElementById("edit14");
+  const editarea15 = document.getElementById("edit15");
+  const editarea16 = document.getElementById("edit16");
+  const editarea17 = document.getElementById("edit17");
+  const editarea18 = document.getElementById("edit18");
+  const editarea19 = document.getElementById("edit19");
+
+  const p1 = document.getElementById("p1");
+  const p3 = document.getElementById("p3");
+  const p4 = document.getElementById("p4");
+  const p5 = document.getElementById("p5");
+  const p6 = document.getElementById("p6");
+  const p7 = document.getElementById("p7");
+  const p8 = document.getElementById("p8");
+  const p9 = document.getElementById("p9");
+  const p10= document.getElementById("p10");
+  const p11 = document.getElementById("p11");
+  const p12 = document.getElementById("p12");
+  const p13 = document.getElementById("p13");
+  const p14 = document.getElementById("p14");
+  const p15 = document.getElementById("p15");
+  const p16 = document.getElementById("p16");
+  const listyala = document.getElementById("yala")
+
+  editbtn.addEventListener("click",show);
+  submit.addEventListener("click",save);
+
+  function show() {
+    hidearea.classList.add("edit-visible");
+    editbtn.innerText = "Close";
+    let btn = document.getElementById("show");
+    btn.addEventListener("click",hide);
+    function hide(){
+      hidearea.classList.remove("edit-visible");
+      editbtn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
+    }
+
+    editarea.value = data.p1;
+    let itemsyala = data.yala;
+    let itemswilpattu = data.wilpattu;
+    let itemshorton = data.horton;
+    let threats = data.threats;
+    let threats2 = data.threats2;
+
+    editarea1.value = '';
+    editarea2.value = '';
+    editarea3.value = '';
+    editarea4.value = '';
+
+    for (let i =0; i < itemsyala.length; i++){
+      editarea1.value += data.yala[i] + "\n";
+    }
+    for (let i =0; i < itemswilpattu.length; i++){
+      editarea2.value += data.wilpattu[i] + "\n";
+    }
+    for (let i =0; i < itemshorton.length; i++){
+      editarea3.value += data.horton[i] + "\n";
+    }
+    for (let i =0; i < threats.length; i++){
+      editarea4.value += data.threats[i] + "\n";
+    }
+
+    editarea5.value = data.p3;
+    editarea6.value = data.p4;
+    editarea7.value = data.p5;
+    editarea8.value = data.p6;
+    editarea9.value = data.p7;
+    editarea10.value = data.p8;
+    editarea11.value = data.p9;
+    editarea12.value = '';
+    for (let i =0; i < threats2.length; i++){
+      editarea12.value += data.threats2[i] + "\n";
+    }
+    editarea13.value = data.p10;
+    editarea14.value = data.p11;
+    editarea15.value = data.p12;
+    editarea16.value = data.p13;
+    editarea17.value = data.p14;
+    editarea18.value = data.p15;
+    editarea19.value = data.p16;
+    
+  }
+
+  function save() {
+    hidearea.classList.remove("edit-visible");
+    editbtn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i>`;
+    p1.innerText = editarea.value;
+    p3.innerText = editarea5.value;
+    p4.innerText = editarea6.value;
+    p5.innerText = editarea7.value;
+    p6.innerText = editarea8.value;
+    p7.innerText = editarea9.value;
+    p8.innerText = editarea10.value;
+    p9.innerText = editarea11.value;
+
+    const listItems = editarea1.value.split('\n').map(item => `<li>${item}</li>`).join('');
+      document.getElementById("yala").innerHTML = `<ul>${listItems}</ul>`;
+
+    const listItems1 = editarea2.value.split('\n').map(item => `<li>${item}</li>`).join('');
+
+    document.getElementById("wilpattu").innerHTML = `<ul>${listItems1}</ul>`;
+
+    const listItems2 = editarea3.value.split('\n').map(item => `<li>${item}</li>`).join('');
+
+    document.getElementById("horton").innerHTML = `<ul>${listItems2}</ul>`;
+    const listItems3 = editarea4.value.split('\n').map(item => `<li>${item}</li>`).join('');
+    document.getElementById("threats").innerHTML = `<ul>${listItems3}</ul>`;
+
+    const listItems4 = editarea12.value.split('\n').map(item => `<li>${item}</li>`).join('');
+    document.getElementById("threats2").innerHTML = `<ul>${listItems4}</ul>`;
+  
+  
+  }
 })

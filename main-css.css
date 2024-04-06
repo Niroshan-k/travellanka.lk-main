@@ -4,6 +4,10 @@
 .btn{
   width: 100px;
   background:linear-gradient(to left,#04c879,#04f8aa);
+  cursor: pointer;
+}
+.btn i{
+  cursor: pointer;
 }
 .input-text{
   transition: 300ms;

@@ -213,13 +213,15 @@
           <br>
           <h3 id="sub-head1" x-text="subhead1"></h3>
           <p class="sub-sec" id="sub-sec1" x-text="subsec1"></p>
+          
           <button type="button" class="btn" id="section-edit"><i class="fa-solid fa-pen-to-square"></i></button>
           <button type="button" class="btn" id="section-clear">CLEAR</button>
           <button class="btn" id="submit">SUBMIT</button>
           <br><br>
           <div class="input-text" id="edit">
               <textarea id="edit-area"></textarea>
-          </div>    
+          </div>  
+
           <br>
           <h3 id="sub-head2" x-text="subhead2"></h3>
           <p class="sub-sec" id="sub-sec2" x-text="subsec2"></p>
@@ -363,6 +365,14 @@
           <li x-text="listitem"></li>
         </template>
       </ol>
+      <div class="edit" id="hidelist">
+        <textarea id="edit-list" placeholder="Add your content here..."></textarea>
+      </div>   
+      <div class="inputButton">
+        <button id="show-list"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="eraselist">CLEAR</button>
+        <button id="edit-list-save">SUBMIT</button>
+      </div> 
       
       <br>
       <!-- newa letter -->

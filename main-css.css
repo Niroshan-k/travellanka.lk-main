@@ -33,6 +33,7 @@
   transform: scale(0.1);
   transition: 500ms;
   display: none;
+  margin: 2rem;
 }
 .edit textarea{
   width: 100%;

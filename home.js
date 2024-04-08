@@ -239,7 +239,7 @@ fetch('home.json')
     const submit = document.getElementById("submit");
     const content = document.getElementById("sub-sec1");
 
-    btn.addEventListener("click",show);
+    btn.addEventListener("click",show0);
     btnclear.addEventListener("click",clear);
     submit.addEventListener("click",editcontent);
 
@@ -265,7 +265,7 @@ fetch('home.json')
     btnclearII.addEventListener("click",clear2);
     submitII.addEventListener("click",editcontent2);
 
-    function show() {
+    function show0() {
       area.value = data.subsec1;
       edit.classList.add("show");
     }
@@ -409,6 +409,7 @@ fetch('home.json')
     submitlist.addEventListener("click",submitlistf);
 
     function submitlistf() {
+      showtoeditlist.classList.remove("edit-visible");
       const listItems = listarea.value.split('\n').map(item => `<li>${item}</li>`).join('');
       document.getElementById("animallist").innerHTML = `<ol>${listItems}</ol>`;
     }
@@ -458,6 +459,9 @@ fetch('home.json')
     });
     localStorage.setItem("subscribers", JSON.stringify(subscribers));
     emailvalue.value = "";
+
+    let p = document.getElementById("newsletterp");
+    p.innerText = "News letter subscription successfull, Thank you!"
   }
 
 /*const buttonadmin = document.getElementById("editButton");

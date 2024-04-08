@@ -102,14 +102,32 @@
   
   <br>
   <section>
-    
+      
+    <div class="inputButton" style="padding: 2rem">
+      <button id="show"><i class="fa-solid fa-pen-to-square"></i></button>
+      <button id="erase">CLEAR</button>
+      <button id="submit">SUBMIT</button>
+    </div> 
+    <div class="edit" id="unhide">
+      <p>History of wilpattu p1:</p>
+      <textarea style="height: 4rem;" id="edit1" placeholder="Add your content here..."></textarea>
+      <p>History of wilpattu p2:</p>
+      <textarea style="height: 4rem;" id="edit2" placeholder="Add your content here..."></textarea>
+      <p>Camp among the roaming Wild life :</p>
+      <textarea style="height: 4rem;" id="edit3" placeholder="Add your content here..."></textarea>
+      <p>Birde Watching and Safari :</p>
+      <textarea style="height: 4rem;" id="edit4" placeholder="Add your content here..."></textarea>
+      <p>Stay at bungalo :</p>
+      <textarea style="height: 4rem;" id="edit5" placeholder="Add your content here..."></textarea>
+    </div> 
+
   </section>
   <section class="grid">
     <section>
        <h2 x-text="wilpattuheading1"></h2>
-       <p x-text="wilpattup1"></p>
+       <p id="p1" x-text="wilpattup1"></p>
        <br>
-       <p x-text="wilpattup2"></p>
+       <p id="p2" x-text="wilpattup2"></p>
     </section> 
     <section>
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15856.955738858349!2d81.41589311789754!3d6.491400816664752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae683b969aec5c7%3A0x7e3aa2da875d927e!2sYala%20National%20Park%20Sri%20Lanka!5e0!3m2!1sen!2slk!4v1704012026077!5m2!1sen!2slk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -127,7 +145,7 @@
         <h2 x-text="wilpattuheading3"></h1>
         <hr>  
         <br>
-        <p x-text="wilpattup3"></p>
+        <p id="p3" x-text="wilpattup3"></p>
     </section>
    </section>
    <section class="grid">
@@ -135,7 +153,7 @@
       <h2 x-text="wilpattuheading4"></h2>
       <hr>
       <br>
-      <p x-text="wilpattup4"></p>
+      <p id="p4" x-text="wilpattup4"></p>
     </section>
     <section class="animation">
       <img src="Picsart_23-12-31_21-34-17-499.png">
@@ -149,10 +167,12 @@
       <h2 x-text="wilpattuheading5"></h2>
       <hr>
       <br>
-      <p x-text="wilpattup5"></p>
+      <p id="p5" x-text="wilpattup5"></p>
     </section>
    </section>
+   
   <script src="wilpattu.js"></script> 
+
 </main>
 <footer>
  <section>

@@ -19,21 +19,57 @@
   <style>
     table {
       border-collapse: collapse;
+      border-radius: 10px;
+      display: block;
       width: 100%;
     }
     th, td {
-      border: 3px solid #ddd;
-      padding: 8px;
-      text-align: left;
+      border: 3px solid #bdffdf;
+      padding: 1rem;
+      text-align: left; 
     }
     th {
       background-color: #17452f;
     }
     main {
+     padding: 1rem;
+     margin-left: 5rem;
+    }
+    .table-responsive {
+      overflow-x: auto;
+      
+    }
+    .container{
      padding: 2rem;
+     width: 100%;
+    }
+    
+    @media only screen and (max-width: 600px){
+      #userTable {
+        display: none;
+      }
+      #user {
+        display: none;
+      }
+      table{
+        width: 100%;
+      }
+      main {
+        padding: 0%;
+        margin-left: 0px;
+      }
     }
   </style>
 </head>
+<header class="headlogos">
+ <!-- logos -->
+ <section>
+   <img src="20231226_172656.png" class="head-logo" alt="logo"> 
+ </section>
+ <section class="buttono">
+   <button class="sign-up"><a href="register.html">Log Out</a></button>
+ </section> 
+</header>
 <body>
  <nav>
   <section class="navbar">
@@ -90,7 +126,8 @@
   </nav>
   
  <main>
-  <h2>Users</h2>
+  <div class="container">
+  <h2 id="user">Users</h2>
   <table id="userTable">
     <thead>
       <tr>
@@ -114,7 +151,7 @@
     <tbody>
     </tbody>
   </table>
-
+  </div>
   <script>
     // Function to hash a string using SHA-256
     function sha256(plain) {

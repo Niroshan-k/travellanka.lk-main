@@ -192,7 +192,7 @@ function clearError(id) {
     error.innerText = "";
 }
 
-let eye = document.getElementById("eyeicon");
+let eye = document.getElementById("eyeicon2");
 let password = document.getElementById("newpassword");
 eye.onclick = function(){
         if(password.type == "password"){
@@ -203,6 +203,18 @@ eye.onclick = function(){
             eye.src = "eye-close.png";
         }
 }
+let eye2 = document.getElementById("eyeicon1");
+let passwordlogin = document.getElementById("password");
+eye2.onclick = function(){
+        if(passwordlogin.type == "password"){
+            passwordlogin.type = "text";
+            eye2.src = "eye-open.png";
+        }else {
+            passwordlogin.type = "password";
+            eye2.src = "eye-close.png";
+        }
+}
+
 
 
 /*function checkLogin() {

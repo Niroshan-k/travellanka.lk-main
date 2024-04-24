@@ -94,9 +94,26 @@ fetch('dowc.json')
   const p9 = document.getElementById("p9");
   const p10 = document.getElementById("p10");
   const submit = document.getElementById("editsave");
+  const clear = document.getElementById("erase");
 
   showbtn.addEventListener("click",showfunction);
   submit.addEventListener("click",saveeditfunction);
+  clear.addEventListener("click",cleartextedit);
+
+  function cleartextedit() {
+    p1.innerText = data.p1;
+    p2.innerText = data.p2;
+    p3.innerText = data.p3;
+    p4.innerText = data.p4;
+    p5.innerText = data.p5;
+    p6.innerText = data.p6;
+    p7.innerText = data.p7;
+    p8.innerText = data.p8;
+    p9.innerText = data.p9;
+    p10.innerText = data.p10;
+    area.classList.remove("edit-visible");
+    areax.classList.remove("edit-visible");
+  }
 
   function showfunction() {
     area.classList.add("edit-visible");
@@ -168,4 +185,4 @@ fetch('dowc.json')
     
 
   }
-})
+});
